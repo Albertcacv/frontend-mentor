@@ -1,0 +1,136 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+ */
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('https://fonts.google.com/specimen/Montserrat');
+}
+
+@font-face {
+	font-family: 'Fraunces';
+	src: url('https://fonts.google.com/specimen/Fraunces');
+}
+:root {
+	--dark-cyan: hsl(158, 36%, 37%);
+	--cream: hsl(30, 38%, 92%);
+	--very-dark-blue: hsl(212, 21%, 14%);
+	--dark-grayish-blue: hsl(228, 12%, 48%);
+	--white: hsl(0, 0%, 100%);
+	--font-size: 14px;
+	--font-regular-weight: 500;
+	--font-bold-weight: 700;
+}
+
+body {
+	font-size: var(--font-size);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--cream);
+	margin: 0;
+	min-height: 100vh;
+	font-weight: var(--font-regular-weight);
+}
+
+.product {
+	background-color: var(--white);
+
+	margin: 10px;
+	border-radius: 10px;
+}
+
+.product-info {
+	padding: 20px;
+}
+.product__image {
+	background-image: url('../images/image-product-mobile.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 15rem;
+	border-radius: 10px 10px 0 0;
+}
+
+.product__caption {
+	letter-spacing: 5px;
+}
+
+.product__title {
+	font-family: 'Fraunces', sans-serif;
+	font-weight: var(--font-bold-weight);
+	font-size: 2.5rem;
+}
+
+.product__caption,
+.product__description {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.product__description {
+	max-width: 87%;
+	line-height: 1.5;
+}
+
+.product__price,
+.product__price--strikethrough {
+	font-family: 'Fraunces', sans-serif;
+	font-weight: var(--font-bold-weight);
+}
+
+.product__price {
+	color: var(--dark-cyan);
+	font-size: 2.5rem;
+}
+.product__price--strikethrough {
+	text-decoration: line-through;
+	color: rgb(110, 105, 105);
+}
+
+.product__button {
+	margin-top: 10px;
+	width: 100%;
+	height: 3rem;
+	border-radius: 10px;
+	border: 0;
+	background-color: var(--dark-cyan);
+	color: var(--white);
+	font-family: Montserrat;
+	font-weight: var(--font-bold-weight);
+}
+
+@media screen and (min-width: 426px) {
+	.product {
+		display: flex;
+	}
+
+	.product__title {
+		max-width: 70%;
+	}
+
+	.product__image {
+		background-image: url('../images/image-product-desktop.jpg');
+		background-size: cover;
+		width: 100%;
+		height: 28rem;
+		border-radius: 10px 0 0 10px;
+	}
+
+	.product__button:hover {
+		background-color: var(--very-dark-blue);
+	}
+}
